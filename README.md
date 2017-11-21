@@ -12,7 +12,7 @@ This template is distributed without any warranty. See <http://knoldus.com>.
 ##### Pre-Requirements
 Apache Cassandra running on default port [i.e. 9042]
 
-*sbt "runMain com.knoldus.TripleLoader /PATH/TO/TRIPLE/FILE"*
+*sbt "runMain com.knoldus.TripleLoader </PATH/TO/TRIPLE/FILE>"*
 
 ### Step to Start Searching Endpoint
 
