@@ -42,6 +42,7 @@ object TripleLoader {
     val directPredicateHashing = new DirectPredicateHashing(cassandraCluster, queryHelper)
     val tripleOperations = new TripleOperations()(cassandraCluster, predicateHashing, directPredicateHashing)
     val tripleLoader =  new TripleLoader
+    cassandraCluster.createDatabase()
     cassandraCluster.createDPHTable()
     cassandraCluster.createPredicateSchema()
     tripleLoader.loadTripleFileToCassandra(args(0), tripleOperations)
