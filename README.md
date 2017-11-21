@@ -18,7 +18,7 @@ Apache Cassandra running on default port [i.e. 9042]
 
 ##### Pre-Requirements
 1. Apache Cassandra running on default port [i.e. 9042]
-2. Triples must be loaded into Cassandra.
+2. Triples must be loaded into Cassandra. To load triple you can visit [Wiki](https://github.com/knoldus/triple-manipulation.g8/wiki)
 
 *sbt "runMain com.knoldus.route.TripleRoute"*
 
@@ -29,3 +29,4 @@ Searching Endpoint will be avaialbe on port `8082`.
     predicate
     
 **Output:-** Triple value as JSON
+
