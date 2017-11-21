@@ -1,4 +1,4 @@
-A [Giter8][g8] template for Triple Manipulation
+A **Giter8** template for Triple Manipulation
 
 Template license
 ----------------
