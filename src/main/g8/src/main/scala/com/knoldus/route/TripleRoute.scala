@@ -10,11 +10,9 @@ import com.google.inject.Inject
 import com.knoldus.helper.QueryHelper
 import com.knoldus.model.CassandraCluster
 import com.knoldus.service.{DirectPredicateHashing, Hashing, PredicateHashing, TripleOperations}
-
 import scala.concurrent.ExecutionContextExecutor
 
-
-class TripleRoute @Inject()(tripleOperations: TripleOperations) extends Directives{
+class TripleRoute @Inject()(tripleOperations: TripleOperations) extends Directives {
 
   def getObjectForTriples: Route = {
     path("triples") {
