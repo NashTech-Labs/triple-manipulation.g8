@@ -29,8 +29,9 @@ val scalaTest = "org.scalatest" %% "scalatest" % "3.0.4" % "test"
 val mockito = "org.mockito" % "mockito-all" % "1.10.19" % "test"
 val cassandraUnit = "org.cassandraunit" % "cassandra-unit" % "3.1.3.2" % "test"
 val logBackClassic = "ch.qos.logback" % "logback-classic" % "1.2.3"
+val akkaHttpTestkit = "com.typesafe.akka" % "akka-http-testkit_2.11" % "10.0.10" % "test"
 
-val testDependencies = Seq(scalaTest, mockito, cassandraUnit, logBackClassic)
+val testDependencies = Seq(scalaTest, mockito, cassandraUnit, logBackClassic, akkaHttpTestkit)
 
 //Overrides
 val thrift = "org.apache.thrift" % "libthrift" % "0.9.2" pomOnly()

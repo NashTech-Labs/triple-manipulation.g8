@@ -20,7 +20,6 @@ class TripleRoute @Inject()(tripleOperations: TripleOperations) extends Directiv
     path("triples") {
       get {
         parameter('subject.as[String], 'predicate.as[String]) { (subject, predicate) =>
-          println(subject, predicate)
           val response = tripleOperations.getTriplesAsJson(subject, predicate)
           complete(HttpResponse(StatusCodes.OK,
             entity = HttpEntity(`application/json`, response)))
@@ -35,6 +34,9 @@ object TripleRoute {
   def main(args: Array[String]): Unit = {
     val queryHelper = new QueryHelper
     val cassandraCluster = new CassandraCluster(queryHelper)
+    cassandraCluster.createDatabase()
+    cassandraCluster.createDPHTable()
+    cassandraCluster.createPredicateSchema()
     val hashing = new Hashing
     val predicateHashing = new PredicateHashing(cassandraCluster, hashing, queryHelper)
     val directPredicateHashing = new DirectPredicateHashing(cassandraCluster, queryHelper)
